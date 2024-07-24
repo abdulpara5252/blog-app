@@ -32,7 +32,7 @@ const BlogPostList = () => {
       setLoading(true); 
       try {
         const response = await axios.get(
-          `https://newsapi.org/v2/everything?q=technology&apiKey=96f0a2104ee9417e8abb8d6452d6bda3&page=${currentPage}`
+          `https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/everything?q=technology&apiKey=96f0a2104ee9417e8abb8d6452d6bda3&page=${currentPage}`
         );
         setPosts(response.data.articles);
         setTotalPages(Math.ceil(response.data.totalResults / 20)); // Assuming 20 results per page

@@ -29,7 +29,7 @@ const StyledBlogPostDetails = () => {
     const fetchPost = async () => {
       try {
         const response = await axios.get(
-          `https://newsapi.org/v2/everything?q=${encodeURIComponent(id)}&apiKey=96f0a2104ee9417e8abb8d6452d6bda3`
+          `https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/everything?q=${encodeURIComponent(id)}&apiKey=96f0a2104ee9417e8abb8d6452d6bda3`
         );
         setPost(response.data.articles[0]);
       } catch (error) {
